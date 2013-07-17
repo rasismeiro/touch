@@ -30,7 +30,7 @@
       
       var f = parseInt(e.style['font-size'].replace('px',''));
       f = Math.round(f * parseFloat(e.scale));
-      if (f<35) { e.target.style.fontSize = f+'px';}
+      if (f<32) { e.target.style.fontSize = f+'px';}
   });
   
   el.addEventListener('pinchout',function(e){
