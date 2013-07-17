@@ -27,10 +27,18 @@
   
   el.addEventListener('pinchin',function(e){
       e.target.innerHTML = 'pinch in '+e.scale.toFixed(3);
+      
+      var f = parseInt(e.target.style['font-size'].replace('px',''));
+      f = Math.round(f * parseFloat(e.scale));
+      e.target.style.fontSize = f+'px';
   });
   
   el.addEventListener('pinchout',function(e){
-      e.target.innerHTML = 'pinch out '+ e.scale.toFixed(3);      
+      e.target.innerHTML = 'pinch out '+ e.scale.toFixed(3);
+      
+      var f = parseInt(e.target.style['font-size'].replace('px',''));
+      f = Math.round(f * parseFloat(e.scale));
+      e.target.style.fontSize = f+'px';
   });
   
   new Touch(el);
