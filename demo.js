@@ -39,6 +39,9 @@
       var f = parseInt(e.target.style['font-size'].replace('px',''));
       f = Math.round(f * parseFloat(e.scale));
       e.target.style.fontSize = f+'px';
+      if (e.scale>1.5){
+        alert(f);
+      }
   });
   
   new Touch(el);
