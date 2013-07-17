@@ -47,14 +47,13 @@
         this.o.dispatchEvent(e);        
         if ('function' === typeof(this.fn[f])) {
           this.fn[f](this.o);
-        }
-        ;
+        }        
       },
       pinch: function() {
-        var n = 'pinch',dt = {scale : this.e.scale, style: this.s},
+        var e, n = 'pinch',dt = {scale : this.e.scale, style: this.s},
             p = {bubbles: false, cancelable: false, detail: dt};    
         if (this.e.scale < 1.0) {
-          var e = new CustomEvent('pinchout',p);
+          e = new CustomEvent('pinchout',p);
           e.scale = this.e.scale;
           e.style = dt.style;
           this.o.dispatchEvent(e);
@@ -62,7 +61,7 @@
              this.fn[n+'out'](this.o, dt.scale, dt.style);
           }
         } else if (this.e.scale > 1.0){
-          var e = new CustomEvent('pinchin',p);
+          e = new CustomEvent('pinchin',p);
           e.scale = this.e.scale;
           e.style = dt.style;
           this.o.dispatchEvent(e);
@@ -74,15 +73,15 @@
       tap: function(){
          var e = new CustomEvent('tap');
          this.o.dispatchEvent(e);
-         if ('function' === typeof this.fn['tap']){
-           this.fn['tap'](this.o);
+         if ('function' === typeof this.fn.tap){
+           this.fn.tap(this.o);
          }
       },
       dbltap: function (){
         var e = new CustomEvent('dbltap');
         this.o.dispatchEvent(e);
-        if ('function' === typeof this.fn['dbltap']){
-           this.fn['dbltap'](this.o);
+        if ('function' === typeof this.fn.dbltap){
+           this.fn.dbltap(this.o);
          }
       }
     };
@@ -123,10 +122,10 @@
           d = e.timeStamp - t.lt;          
           t.lt = e.timeStamp;          
           if (d>10 && d<t.dtp) {
-            clearTimeout(t.ltt);
+            w.clearTimeout(t.ltt);
             t.dbltap();
           } else {
-            t.ltt = setTimeout(function(){t.tap();},t.dtp);
+            t.ltt = w.setTimeout(function(){t.tap();},t.dtp);
           }
           
         }
