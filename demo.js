@@ -30,10 +30,7 @@
       
       var f = parseInt(e.style['font-size'].replace('px',''));
       f = Math.round(f * parseFloat(e.scale));
-      e.target.style.fontSize = f+'px';
-      if (e.scale>1.5){
-        alert(f);
-      }
+      e.target.style.fontSize = f+'px';      
   });
   
   el.addEventListener('pinchout',function(e){
@@ -41,11 +38,7 @@
       
       var f = parseInt(e.style['font-size'].replace('px',''));
       f = Math.round(f * parseFloat(e.scale));
-      e.target.style.fontSize = f+'px';
-      
-      if (e.scale<0.5){
-        alert(f);
-      }
+      e.target.style.fontSize = f+'px';      
   });
   
   new Touch(el);
