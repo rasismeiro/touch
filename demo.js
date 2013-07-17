@@ -26,11 +26,11 @@
   });
   
   el.addEventListener('pinchin',function(e){
-      e.target.innerHTML = 'pinch in '+e.scale;
+      e.target.innerHTML = 'pinch in '+e.scale.toFixed(3);
   });
   
   el.addEventListener('pinchout',function(e){
-      e.target.innerHTML = 'pinch out '+e.scale;
+      e.target.innerHTML = 'pinch out '+ e.scale.toFixed(3);      
   });
   
   new Touch(el);
