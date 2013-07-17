@@ -28,7 +28,7 @@
   el.addEventListener('pinchin',function(e){
       e.target.innerHTML = 'pinch in '+e.scale.toFixed(3);
       
-      var f = parseInt(e.target.style['font-size'].replace('px',''));
+      var f = parseInt(e.style['font-size'].replace('px',''));
       f = Math.round(f * parseFloat(e.scale));
       e.target.style.fontSize = f+'px';
       if (e.scale>1.5){
@@ -39,7 +39,7 @@
   el.addEventListener('pinchout',function(e){
       e.target.innerHTML = 'pinch out '+ e.scale.toFixed(3);
       
-      var f = parseInt(e.target.style['font-size'].replace('px',''));
+      var f = parseInt(e.style['font-size'].replace('px',''));
       f = Math.round(f * parseFloat(e.scale));
       e.target.style.fontSize = f+'px';
       
