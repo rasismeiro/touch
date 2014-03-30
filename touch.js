@@ -4,7 +4,7 @@
   
   w.Touch = function(id) {
     var t = {
-      t: ['up', 'rigth', 'down', 'left'],
+      t: ['up', 'right', 'down', 'left'],
       tt: 300, tp: 150, dtp: 222, td: 50, lt: -1, 
       ltt: null, s : null, fn: [], e: null, o: null,
       p1: {x: 0, y: 0, t: 0},
