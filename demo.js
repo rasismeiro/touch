@@ -21,8 +21,8 @@
       e.target.innerHTML = 'left';
   });
   
-  el.addEventListener('swiperigth',function(e){
-      e.target.innerHTML = 'rigth';
+  el.addEventListener('swiperight',function(e){
+      e.target.innerHTML = 'right';
   });
   
   el.addEventListener('pinchin',function(e){
