@@ -5,7 +5,7 @@
   w.Touch = function(id) {
     var t = {
       t: ['up', 'right', 'down', 'left'],
-      tt: 300, tp: 150, dtp: 222, td: 50, lt: -1, 
+      tt: 300, tp: 150, dtp: 222, td: Math.round(30 / window.devicePixelRatio), lt: -1, 
       ltt: null, s : null, fn: [], e: null, o: null,
       p1: {x: 0, y: 0, t: 0},
       p2: {x: 0, y: 0, t: 0},
