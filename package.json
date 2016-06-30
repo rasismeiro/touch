@@ -17,8 +17,8 @@
     "events",
     "pinch"
   ],
-  "author": "Andy Dayton <amdayton@gmail.com> (http://andydayton.com/)",
-  "license": "Apache-2.0",
+  "author": "Ricardo Sismeiro <ricardo@sismeiro.com>",
+  "license": "Licensed under the Apache License, Version  2.0",
   "bugs": {
     "url": "https://github.com/rasismeiro/touch/issues"
   },
